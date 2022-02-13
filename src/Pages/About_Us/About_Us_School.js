@@ -53,8 +53,8 @@ function App() {
   useEffect(() => {
     const getContent = async () => {
       const snapshot = await database
-        .collection("Study_Mat_DegreeClg")
-        .doc("Study_Mat_DegreeClg")
+        .collection("About_Us_School")
+        .doc("About_Us_School")
         .get();
       setimagesss(snapshot.data().Images_array);
     };
@@ -63,8 +63,8 @@ function App() {
   useEffect(() => {
     const getContent = async () => {
       const snapshot = await database
-        .collection("Study_Mat_DegreeClg")
-        .doc("Study_Mat_DegreeClg")
+        .collection("About_Us_School")
+        .doc("About_Us_School")
         .get();
       setpdfsss(snapshot.data().pdfs_array);
     };
@@ -73,8 +73,8 @@ function App() {
   useEffect(() => {
     const getContent = async () => {
       const snapshot = await database
-        .collection("Study_Mat_DegreeClg")
-        .doc("Study_Mat_DegreeClg")
+        .collection("About_Us_School")
+        .doc("About_Us_School")
         .get();
 
       settextsss(snapshot.data().texts_array);
@@ -102,16 +102,16 @@ function App() {
           .getDownloadURL()
           .then(async (url) => {
             const snapshot = await database
-              .collection("Study_Mat_DegreeClg")
-              .doc("Study_Mat_DegreeClg")
+              .collection("About_Us_School")
+              .doc("About_Us_School")
               .get();
             console.log("namaste", snapshot.data().images_array);
             var daty = snapshot.data().images_array;
             const newdaty = { url, ImgText };
             daty.push(newdaty);
             await database
-              .collection("Study_Mat_DegreeClg")
-              .doc("Study_Mat_DegreeClg")
+              .collection("About_Us_School")
+              .doc("About_Us_School")
               .update(
                 {
                   images_array: daty,
@@ -127,21 +127,18 @@ function App() {
   const HandleTextUpload = async (e) => {
     e.preventDefault();
     const snapshot = await database
-      .collection("Study_Mat_DegreeClg")
-      .doc("Study_Mat_DegreeClg")
+      .collection("About_Us_School")
+      .doc("About_Us_School")
       .get();
     console.log("namaste", snapshot.data().texts_array);
     var daty = snapshot.data().texts_array;
     daty.push(newText);
-    await database
-      .collection("Study_Mat_DegreeClg")
-      .doc("Study_Mat_DegreeClg")
-      .update(
-        {
-          texts_array: daty,
-        },
-        { merge: true }
-      );
+    await database.collection("About_Us_School").doc("About_Us_School").update(
+      {
+        texts_array: daty,
+      },
+      { merge: true }
+    );
   };
 
   const HandlePdfUpload = async (e) => {
@@ -166,15 +163,15 @@ function App() {
           .getDownloadURL()
           .then(async (url) => {
             const snapshot = await database
-              .collection("Study_Mat_DegreeClg")
-              .doc("Study_Mat_DegreeClg")
+              .collection("About_Us_School")
+              .doc("About_Us_School")
               .get();
             console.log("namaste", snapshot.data().pdfs_array);
             var daty = snapshot.data().pdfs_array;
             daty.push(url);
             await database
-              .collection("Study_Mat_DegreeClg")
-              .doc("Study_Mat_DegreeClg")
+              .collection("About_Us_School")
+              .doc("About_Us_School")
               .update(
                 {
                   pdfs_array: daty,
@@ -189,8 +186,8 @@ function App() {
   };
   const HandledeleteImage = async (id) => {
     const snapshot = await database
-      .collection("Study_Mat_DegreeClg")
-      .doc("Study_Mat_DegreeClg")
+      .collection("About_Us_School")
+      .doc("About_Us_School")
       .get();
     var daty = snapshot.data().images_array;
     console.log("beforedelete", daty);
@@ -199,47 +196,38 @@ function App() {
     daty.splice(id, 1);
     console.log("afterdelete", daty);
 
-    await database
-      .collection("Study_Mat_DegreeClg")
-      .doc("Study_Mat_DegreeClg")
-      .update(
-        {
-          images_array: daty,
-        },
-        { merge: true }
-      );
+    await database.collection("About_Us_School").doc("About_Us_School").update(
+      {
+        images_array: daty,
+      },
+      { merge: true }
+    );
   };
   const HandledeletePdf = async (id) => {
     const snapshot = await database
-      .collection("Study_Mat_DegreeClg")
-      .doc("Study_Mat_DegreeClg")
+      .collection("About_Us_School")
+      .doc("About_Us_School")
       .get();
     var daty = snapshot.data().pdfs_array;
     console.log("beforedelete", daty);
     daty.splice(id, 1);
     console.log("afterdelete", daty);
 
-    await database
-      .collection("Study_Mat_DegreeClg")
-      .doc("Study_Mat_DegreeClg")
-      .update(
-        {
-          pdfs_array: daty,
-        },
-        { merge: true }
-      );
+    await database.collection("About_Us_School").doc("About_Us_School").update(
+      {
+        pdfs_array: daty,
+      },
+      { merge: true }
+    );
   };
   return (
     <div className="App text-dark">
       <header className="App-header text-dark">
         <div className="mt-4 p-5 banner_radient text-dark rounded container">
-          <h3 className="bg-secondary p-3">Study Material: Degree College</h3>
+          <h3 className="bg-secondary p-3">About Us: School</h3>
           <div className="row">
-            <div className="col-md-4 ">
-              <Link
-                className="text-decoration-none"
-                to="/study_material_school"
-              >
+            <div className="col-md-4 bg-success">
+              <Link className="text-decoration-none" to="/aboutus_school">
                 <h1 className="text-dark">School</h1>
                 <img
                   className="img-fluid"
@@ -248,11 +236,8 @@ function App() {
                 />
               </Link>
             </div>
-            <div className="col-md-4 ">
-              <Link
-                className="text-decoration-none"
-                to="/study_material_jnrClg"
-              >
+            <div className="col-md-4">
+              <Link className="text-decoration-none" to="/aboutus_jnrClg">
                 <h1 className="text-dark">Junior College</h1>
                 <img
                   className="img-fluid"
@@ -261,11 +246,8 @@ function App() {
                 />
               </Link>
             </div>
-            <div className="col-md-4 bg-success">
-              <Link
-                className="text-decoration-none"
-                to="/study_material_degreeClg"
-              >
+            <div className="col-md-4">
+              <Link className="text-decoration-none" to="/aboutus_degreeClg">
                 <h1 className="text-dark">Degree College</h1>
                 <img
                   className="img-fluid"

@@ -1,11 +1,18 @@
 .App {
   text-align: center;
+  color: #000000;
 }
 
 .App-header {
   align-items: center;
-  color: white;
+  color: rgb(0, 0, 0);
 }
+.banner_radient {
+  border: 3px solid #000000;
+  /* background-color: #c177b2; */
+  /* background-image: linear-gradient(315deg, #c177b2 0%, #e2e1e1 74%); */
+}
+
 .ImgDownloadIconspan {
   border-radius: 5px;
   padding: 15px;
@@ -41,10 +48,10 @@
   width: 15em;
   border-radius: 8px;
   border-style: none;
-  border: 1px solid #e4e6e8;
+  border: 1px solid #000000;
   transition: 0.1s ease;
   background-color: transparent;
-  color: #ffffff;
+  color: #000000;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -56,7 +63,7 @@
 }
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #ffffff;
+  color: #000000;
   opacity: 1; /* Firefox */
 }
 #imageuploadform {
@@ -65,14 +72,14 @@
   border-radius: 15px;
 }
 .imageuploadformform {
-  border: 3px solid #e4e6e8;
+  border: 3px solid #000000;
   border-radius: 15px;
   padding: 2em;
 }
 .imgFormBtn {
   margin: 0.8em;
   padding: 0.5em;
-  border: 1px solid #e4e6e8;
+  border: 1px solid #000000;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.1s ease-in;
@@ -83,14 +90,14 @@
 
 .imgFormBtn:hover {
   background-color: palevioletred;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .pdfDisplayClass {
   margin-bottom: 15px !important;
 }
 .pdfDisplayClassElement {
-  border: 1px solid #e4e6e8;
+  border: 1px solid #000000;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
@@ -114,7 +121,7 @@
   transform: translate(0, 10px);
 }
 .IconsSpan a {
-  color: #ffffff;
+  color: #000000;
   text-decoration: none;
 }
 .DownloadIconspan {
@@ -127,5 +134,5 @@
 }
 .DownloadIconspan:hover .DownloadIcon {
   transform: scale(1.5);
-  color: #ffffff;
+  color: #000000;
 }

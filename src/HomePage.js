@@ -16,6 +16,8 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
+import { Link } from "react-router-dom";
+
 function CircularProgressWithLabel(props) {
   return (
     <Box sx={{ position: "relative", display: "inline-flex" }}>
@@ -47,20 +49,7 @@ function App() {
   const [newText, setNewText] = useState("");
   const [imagesss, setimagesss] = useState([]);
   const [pdfsss, setpdfsss] = useState([]);
-  const [pdfDisplay, setpdfDisplay] = useState([]);
   const [textsss, settextsss] = useState([]);
-  const [ImgModalopen, setImgModalOpen] = useState(false);
-  const style = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: 400,
-    bgcolor: "background.paper",
-    border: "2px solid #000",
-    boxShadow: 24,
-    p: 4,
-  };
 
   useEffect(() => {
     const getContent = async () => {
@@ -233,46 +222,54 @@ function App() {
     );
   };
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="mt-4 p-5 bg-primary text-white rounded container">
-          <h3 className="bg-secondary p-3"> Notice Board</h3>
+    <div className="App text-dark">
+      <header className="App-header text-dark">
+        <div className="mt-4 p-5 banner_radient text-dark rounded container">
+          <h3 className="bg-secondary p-3">
+            {" "}
+            Dummy Page - Testing Page - Landing Page
+          </h3>
           <div className="row">
             <div className="col-md-4">
-              <a className="text-light" href={`/notice_board_school`}>
-                <h1>School</h1>
+              <Link className="text-decoration-none" to="/notice_board_school">
+                <h1 className="text-dark">School</h1>
                 <img
                   className="img-fluid"
                   src="https://www.voicesofyouth.org/sites/voy/files/images/2019-03/school.jpg"
                   alt=""
                 />
-              </a>
+              </Link>
             </div>
             <div className="col-md-4">
-              <a className="text-light" href={`/notice_board_jnrClg`}>
-                <h1>Junior College</h1>
+              <Link className="text-decoration-none" to="/notice_board_jnrClg">
+                <h1 className="text-dark">Junior College</h1>
                 <img
                   className="img-fluid"
                   src="https://www.top10onlinecolleges.org/wp-content/uploads/2020/08/What-is-Junior-College.jpg"
                   alt=""
                 />
-              </a>
+              </Link>
             </div>
             <div className="col-md-4">
-              <a className="text-light" href={`/notice_board_degreeClg`}>
-                <h1>Degree College</h1>
+              <Link
+                className="text-decoration-none"
+                to="/notice_board_degreeClg"
+              >
+                <h1 className="text-dark">Degree College</h1>
                 <img
                   className="img-fluid"
                   src="https://www.thenewsminute.com/sites/default/files/styles/news_detail/public/Degree_College_poster.jpg?itok=555ZicL6"
                   alt=""
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
-        <h1>Amma Baboi</h1>
 
-        <div className="mx-auto" style={{ width: "50vw" }}>
+        <div
+          className="mx-auto imgCarousel text-dark"
+          style={{ width: "50vw" }}
+        >
           <Carousel
             autoPlay
             showArrows={true}
@@ -445,8 +442,6 @@ function App() {
         </div>
       </header>
 
-      <br />
-      <br />
       <br />
       <br />
       <br />

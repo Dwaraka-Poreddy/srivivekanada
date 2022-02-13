@@ -1,9 +1,13 @@
 body {
   /* margin: 0; */
-  background: url(https://external-preview.redd.it/maCo_IQpxZHQiKhC3btIbR1uw6Y06aGOpibwtQYkA1E.png?auto=webp&s=58360e774a2be9dab5d9ecd52880a9fbf32899f5);
+  background-color: #e4e1e1 !important;
+  /* background-image: linear-gradient(315deg, #adb2d3 25%, #ff6b6b 74%); */
+
+  /* background: url(https://external-preview.redd.it/maCo_IQpxZHQiKhC3btIbR1uw6Y06aGOpibwtQYkA1E.png?auto=webp&s=58360e774a2be9dab5d9ecd52880a9fbf32899f5); */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 code {

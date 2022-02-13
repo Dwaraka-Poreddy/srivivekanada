@@ -1,0 +1,131 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  align-items: center;
+  color: white;
+}
+.ImgDownloadIconspan {
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  background-color: green;
+}
+.ImgDownloadIconspan:hover {
+  background-color: rgb(49, 168, 49);
+}
+.ImgDownloadIconspan:hover .ImgDownloadIcon {
+  transform: scale(1.5);
+}
+.ImgDeleteIconspan {
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  background-color: red;
+}
+.ImgDeleteIconspan:hover {
+  background-color: rgba(240, 8, 8, 0.924);
+}
+.ImgDeleteIconspan:hover .ImgDeleteIcon {
+  transform: scale(1.5);
+}
+.legend {
+  opacity: 1 !important;
+}
+.imgFormInput {
+  display: block;
+  margin: 1em;
+  width: 100%;
+  padding: 1em;
+  width: 15em;
+  border-radius: 8px;
+  border-style: none;
+  border: 1px solid #e4e6e8;
+  transition: 0.1s ease;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.imgFormInput:hover {
+  border-color: palevioletred;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ffffff;
+  opacity: 1; /* Firefox */
+}
+#imageuploadform {
+  /* border: 3px solid #e4e6e8; */
+  padding: 1em;
+  border-radius: 15px;
+}
+.imageuploadformform {
+  border: 3px solid #e4e6e8;
+  border-radius: 15px;
+  padding: 2em;
+}
+.imgFormBtn {
+  margin: 0.8em;
+  padding: 0.5em;
+  border: 1px solid #e4e6e8;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s ease-in;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.imgFormBtn:hover {
+  background-color: palevioletred;
+  color: white;
+}
+
+.pdfDisplayClass {
+  margin-bottom: 15px !important;
+}
+.pdfDisplayClassElement {
+  border: 1px solid #e4e6e8;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.DeleteIconspan {
+  border-radius: 5px;
+  padding: 15px;
+  cursor: pointer;
+  background-color: red;
+}
+.DeleteIconspan:hover {
+  background-color: rgba(240, 8, 8, 0.924);
+}
+.DeleteIconspan:hover .DeleteIcon {
+  transform: scale(1.5);
+}
+.IconsSpan {
+  transform: translate(0, 10px);
+}
+.IconsSpan a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.DownloadIconspan {
+  border-radius: 5px;
+  background-color: green;
+  padding: 15px;
+}
+.DownloadIconspan:hover {
+  background-color: rgb(49, 168, 49);
+}
+.DownloadIconspan:hover .DownloadIcon {
+  transform: scale(1.5);
+  color: #ffffff;
+}
